@@ -7,13 +7,14 @@ namespace ConsoleAppForCsharp8.Default_Interface_Methods
 {
   public interface ICustomer
     {
+        private static int ago { get; set; }
+        private static decimal discount { get; set; }
         IEnumerable<IOrder> PreviousOrders { get; }
         DateTime DateJoined { get; }
         DateTime? LastOrder { get; }
         string Name { get; }
         IDictionary<DateTime, string> Reminders { get; }
-        private static int ago { get; set; }
-        private static decimal discount { get; set; }
+       
         public decimal ComputeLoyaltyDiscount() => DefaultLoyaltyDiscount(this);
         protected static decimal DefaultLoyaltyDiscount(ICustomer c)
         {            

@@ -7,7 +7,7 @@ namespace ConsoleAppForCsharp8.Default_Interface_Methods
 {
     public class SampleCustomer : ICustomer
     {
-        private List<IOrder> Orders = new List<IOrder>() ; 
+        private List<SampleOrder> Orders = new List<SampleOrder>() ; 
         public IEnumerable<IOrder> PreviousOrders => Orders;        
 
         public DateTime DateJoined { get; }

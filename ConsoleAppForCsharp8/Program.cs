@@ -35,9 +35,12 @@ namespace ConsoleAppForCsharp8
             c1.AddOrder(o1);
             c2.AddOrder(o2);
             
-            Console.WriteLine($"Discount for {c1.Name} is {c1.ComputeLoyaltyDiscount()}");
+            Console.WriteLine($"Discount for {c1.Name} is {c1.ComputeLoyaltyDiscount()}"); //calls ComputeLoyaltyDiscount of the SampleCustomer
+            
             Console.WriteLine($"Discount for {c2.Name} is {c2.ComputeLoyaltyDiscount()}");
             Console.WriteLine($"Discount for {c3.Name} is {c3.ComputeLoyaltyDiscount()}");
+            ICustomer c = c3;
+            Console.WriteLine($"ICustomer Discount for {c3.Name} is {c.ComputeLoyaltyDiscount()}");
         }
     }
 }
