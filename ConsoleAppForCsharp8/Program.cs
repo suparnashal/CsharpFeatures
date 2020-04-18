@@ -1,6 +1,8 @@
 ﻿using ConsoleAppForCsharp8.Default_Interface_Methods;
+using ConsoleAppForCsharp8.PatternMatchingFeature;
 using System;
 using System.Net;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ConsoleAppForCsharp8
 {
@@ -9,7 +11,8 @@ namespace ConsoleAppForCsharp8
         static void Main(string[] args)
         {
             //Test_ReadOnly_In_Structs();
-            Test_Default_Interface_Methods();
+            //Test_Default_Interface_Methods();
+            Test_Switch_Expression();
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
@@ -42,5 +45,73 @@ namespace ConsoleAppForCsharp8
             ICustomer c = c3;
             Console.WriteLine($"ICustomer Discount for {c3.Name} is {c.ComputeLoyaltyDiscount()}");
         }
+
+        public static void Test_Switch_Expression()
+        {
+            Console.WriteLine(FromRainbow(Rainbow.Blue));
+            Console.WriteLine(FromRainbow(Rainbow.Orange));
+            Console.WriteLine(FromRainbow(Rainbow.Violet));
+            Console.WriteLine("\n\n");
+
+            //Test switch statement using Propertys of classes
+            Console.WriteLine($"Sales tax for $100 in WA is : {ComputeSalesTax(new Address("WA"), 100M)}");
+            Console.WriteLine($"Sales tax for $100 in CA is : {ComputeSalesTax(new Address("CA"), 100M)}");
+            Console.WriteLine($"Sales tax for $100 in other states is : {ComputeSalesTax(new Address("TX"), 100M)}");
+            Console.WriteLine("\n\n");
+
+            //Tuple Matching in switch statement. Switch statement selecting on 2 parameters
+            Console.WriteLine($"I:Rock , You:Paper : {RockPaperScissors("rock", "paper")}");
+            Console.WriteLine($"I:Rock, You:Rock : {RockPaperScissors("rock", "rock")}");
+            Console.WriteLine($"I:Paper You:Scissors : {RockPaperScissors("paper", "scissors")}\n\n");
+
+            //Positional patterns
+            Console.WriteLine($"Quadrant for (0,0) is : {Position_Switch_Pattern(new PointOnGraph(0,0))}");
+            Console.WriteLine($"Quadrant for (20,20) is : {Position_Switch_Pattern(new PointOnGraph(20,20))}");
+            Console.WriteLine($"Quadrant for (-20,20) is : {Position_Switch_Pattern(new PointOnGraph(-20,20))}\n\n");
+
+        }
+
+        public static string FromRainbow(Rainbow colorBand)
+        {
+         string favColor= colorBand switch
+            {
+                Rainbow.Red => new string("Red"),
+                Rainbow.Orange => new string("Orange"),
+                Rainbow.Blue => new string("Blue"),
+                _ => new string("none")
+            };
+            return favColor;
+        }
+
+        public static decimal ComputeSalesTax(Address location, decimal salesPrice) =>
+            location switch
+            {
+                { State:"WA" } => salesPrice * 0.06M,
+                { State: "CA" } => salesPrice * 0.05M,
+                { State: "MI" } => salesPrice * 0.05M,
+                _ => salesPrice *0.01M
+            };
+
+        public static string RockPaperScissors(string first, string second) =>
+        (first, second) switch
+        {
+            ("rock","paper") => "rock is covered by paper.Paper wins",
+            ("rock","scissors") => "Rock breaks scissors.Scissors wins",
+            ("paper","scissors") => "Scissors cuts paper.Scissors wins",
+            (_,_) => "tie" 
+        };
+
+        public static string Position_Switch_Pattern(PointOnGraph point) =>
+           point switch
+           {
+               (0, 0) => "Quadrant Origin",
+               var (x,y) when x > 0 && y > 0 => "Quadrant One",
+               var (x,y) when x < 0 && y > 0 => "Quadrant Two",
+               var (_,_) => "Quadrant On Border"
+           };
+        
+
+        
+        
     }
 }
