@@ -14,9 +14,11 @@ namespace ConsoleAppForCsharp8
             //Test_ReadOnly_In_Structs();
             //Test_Default_Interface_Methods();
             //Test_Switch_Expression();
-            
+
             //string hexcode= Console.ReadLine();
             //Console.WriteLine($"{AdvancedChallenges.Is_Valid_HexCode(hexcode)}");
+            //AdvancedChallenges.Array_OF_Multiples(7, 5);
+            AdvancedChallenges.ReverseAndNot(123); 
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
