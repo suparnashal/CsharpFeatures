@@ -1,4 +1,5 @@
 ﻿using ConsoleAppForCsharp8.Default_Interface_Methods;
+using ConsoleAppForCsharp8.EdaBitChallenges;
 using ConsoleAppForCsharp8.PatternMatchingFeature;
 using System;
 using System.Net;
@@ -12,7 +13,10 @@ namespace ConsoleAppForCsharp8
         {
             //Test_ReadOnly_In_Structs();
             //Test_Default_Interface_Methods();
-            Test_Switch_Expression();
+            //Test_Switch_Expression();
+            
+            //string hexcode= Console.ReadLine();
+            //Console.WriteLine($"{AdvancedChallenges.Is_Valid_HexCode(hexcode)}");
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
