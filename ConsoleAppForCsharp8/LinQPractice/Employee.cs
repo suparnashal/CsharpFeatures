@@ -34,7 +34,7 @@ namespace ConsoleAppForCsharp8.LinQPractice
                                          Department = "IT", Salary = 54000 },
             new Employee { ID = 9, Name = "Stacey", Gender = "Female",
                                          Department = "HR", Salary = 84000 },
-            new Employee { ID = 10, Name = "Andy", Gender = "Male",
+            new Employee { ID = 10, Name = "Mark", Gender = "Male",
                                          Department = "IT", Salary = 36000 }
         };
         }

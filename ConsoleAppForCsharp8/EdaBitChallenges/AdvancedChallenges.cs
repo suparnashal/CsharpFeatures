@@ -67,9 +67,7 @@ namespace ConsoleAppForCsharp8.EdaBitChallenges
             Console.WriteLine(birthDate.DayOfWeek.ToString());
             var culture = new System.Globalization.CultureInfo("nl-NL");
             var dutchBirthday = culture.DateTimeFormat.GetDayName(birthDate.DayOfWeek);
-
             Console.WriteLine(dutchBirthday.ToString());
-
         }
     }
 }

@@ -18,7 +18,26 @@ namespace ConsoleAppForCsharp8.LinQPractice
             }
         }
 
+        public static void Test_Employee_HavingSame_FirstNames()
+        {
+            var grpEmployees = Employee.GetEmployees().GroupBy(x => x.Name)
+                                                      .Where(g=>g.Count()>1)
+                                                       .Select(k=>new {Name=k.Key,NoOftimes=k.Count()}); // project the outputof where, just give it goodnames
 
+            foreach (var group in grpEmployees)
+            {
+                Console.WriteLine("{0} - {1}", group.Name,group.NoOftimes);
+            }
+        }
+
+        public static void Check_For_Palindrome()
+        {
+            string palindrome = "racecar1";
+            if (String.Concat(palindrome.Reverse()).Equals(palindrome))
+                Console.WriteLine($"String is palindrome: {palindrome}");
+            else
+                Console.WriteLine($"String is NOT a palindrome: {palindrome}");
+        }
 
         public static void Find_Pairs_UsingGroupBy()
         {

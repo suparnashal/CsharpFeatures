@@ -25,8 +25,9 @@ namespace ConsoleAppForCsharp8
             //SetOne.Test_GroupBy_Employees();
             //SetOne.Find_Pairs_UsingGroupBy();
 
-           AdvancedChallenges.WeekdayRobWasBornInDutch(1970, 9, 21);
+            // AdvancedChallenges.WeekdayRobWasBornInDutch(1970, 9, 21);
 
+            SetOne.Test_Employee_HavingSame_FirstNames();
 
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
