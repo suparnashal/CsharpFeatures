@@ -27,7 +27,9 @@ namespace ConsoleAppForCsharp8
 
             // AdvancedChallenges.WeekdayRobWasBornInDutch(1970, 9, 21);
 
-            SetOne.Test_Employee_HavingSame_FirstNames();
+            //SetOne.Test_Employee_HavingSame_FirstNames();
+            //SetTwo.Test_Select_Many();
+            SetTwo.Test_Select_Many2();
 
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
