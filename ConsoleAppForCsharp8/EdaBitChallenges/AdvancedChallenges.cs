@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.WebSockets;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace ConsoleAppForCsharp8.EdaBitChallenges
 {
@@ -45,10 +47,28 @@ namespace ConsoleAppForCsharp8.EdaBitChallenges
             //This code also works
             //List<char> str = Convert.ToString(i).ToList<char>();
             //str.Reverse();
-            //return (new string(str.ToArray<char>())+Convert.ToString(i));         
-
+            //return (new string(str.ToArray<char>())+Convert.ToString(i));           
          return($"{String.Concat(i.ToString().Reverse())}{i.ToString()}");
+        }
+        
+        //good example need to look into groupby more examples
+        public static int SockPairs(string socks)
+        {
+            socks = "CABBACCC";
+            socks.ToCharArray().GroupBy(c => c);
+            socks.ToCharArray().GroupBy(c => c).Select(c=>c.Count()/2);
+           int count= socks.ToCharArray().GroupBy(c => c).Select(c => c.Count() / 2).Sum();
+            return count;
+        }
 
+        public static void WeekdayRobWasBornInDutch(int year, int month, int day)
+        {
+            DateTime birthDate = new DateTime(year, month, day);
+            Console.WriteLine(birthDate.DayOfWeek.ToString());
+            var culture = new System.Globalization.CultureInfo("nl-NL");
+            var dutchBirthday = culture.DateTimeFormat.GetDayName(birthDate.DayOfWeek);
+
+            Console.WriteLine(dutchBirthday.ToString());
 
         }
     }

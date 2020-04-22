@@ -4,6 +4,7 @@ using ConsoleAppForCsharp8.PatternMatchingFeature;
 using System;
 using System.Net;
 using System.Reflection.Metadata.Ecma335;
+using ConsoleAppForCsharp8.LinQPractice;
 
 namespace ConsoleAppForCsharp8
 {
@@ -18,7 +19,15 @@ namespace ConsoleAppForCsharp8
             //string hexcode= Console.ReadLine();
             //Console.WriteLine($"{AdvancedChallenges.Is_Valid_HexCode(hexcode)}");
             //AdvancedChallenges.Array_OF_Multiples(7, 5);
-            AdvancedChallenges.ReverseAndNot(123); 
+            //AdvancedChallenges.ReverseAndNot(123); 
+            //AdvancedChallenges.SockPairs("CABBACCC");
+
+            //SetOne.Test_GroupBy_Employees();
+            //SetOne.Find_Pairs_UsingGroupBy();
+
+           AdvancedChallenges.WeekdayRobWasBornInDutch(1970, 9, 21);
+
+
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
