@@ -29,7 +29,15 @@ namespace ConsoleAppForCsharp8
 
             //SetOne.Test_Employee_HavingSame_FirstNames();
             //SetTwo.Test_Select_Many();
-            SetTwo.Test_Select_Many2();
+            //SetTwo.Test_Select_Many2();
+            //SetTwo.Find_All_Students_ASP_NET();
+
+            //SetTwo.Test_Select_Many_WithGroupBy();
+            //HardChallenges.ConvertTime("6:20 pm");
+            //HardChallenges.ConvertTime("21:00");
+
+            HardChallenges.DuplicateCount("abcde");
+            HardChallenges.DuplicateCount("aabbcde");
 
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
