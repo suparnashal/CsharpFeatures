@@ -36,9 +36,12 @@ namespace ConsoleAppForCsharp8
             //HardChallenges.ConvertTime("6:20 pm");
             //HardChallenges.ConvertTime("21:00");
 
-            HardChallenges.DuplicateCount("abcde");
-            HardChallenges.DuplicateCount("aabbcde");
+            //HardChallenges.DuplicateCount("abcde");
+            //HardChallenges.DuplicateCount("aabbcde");
 
+            //SetTwo.Use_TypeOf();
+            //HardChallenges.Brackets("(a*(b-c)     )");
+            HardChallenges.ToCamelCase("camel_case");
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }

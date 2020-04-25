@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,21 @@ namespace ConsoleAppForCsharp8.LinQPractice
             }
 
         }
+
+        public static void Use_TypeOf()
+        {
+            ArrayList strOfObjects = new ArrayList() { new DateTime(2020,4,24), new string("2/26/2020"),4500 ,
+                     new DateTime(2020, 4, 27), new string("suparna"),78.90m };
+
+            var result = strOfObjects.OfType<DateTime>();
+            
+            foreach (var v in result)
+            {
+                Console.WriteLine($"{v.DayOfWeek}");
+            }
+
+        }       
+
         public static void Find_All_Students_ASP_NET()
         {
             var result = Student.GetAllStudetns().Where(s => s.Subjects.Contains("ASP.NET")).Count();
