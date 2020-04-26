@@ -5,6 +5,7 @@ using System;
 using System.Net;
 using System.Reflection.Metadata.Ecma335;
 using ConsoleAppForCsharp8.LinQPractice;
+using ConsoleAppForCsharp8.CodeWars;
 
 namespace ConsoleAppForCsharp8
 {
@@ -41,7 +42,10 @@ namespace ConsoleAppForCsharp8
 
             //SetTwo.Use_TypeOf();
             //HardChallenges.Brackets("(a*(b-c)     )");
-            HardChallenges.ToCamelCase("camel_case");
+            //HardChallenges.ToCamelCase("camel_case");
+            //Console.WriteLine(CodeWars_SetOne.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 ,0}));
+            
+            Console.WriteLine(CodeWars_SetOne.IsItANum("sjfniebienvr12312312312ehfWh"));
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         }
