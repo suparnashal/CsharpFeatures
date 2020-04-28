@@ -55,22 +55,18 @@ namespace ConsoleAppForCsharp8.CodeWars
 
         public static double Mean(string town,string data2)
         {
-            double avg = -1;
-            List<string> listofdata = data.Split("\n").ToList<string>();            
-
+            double avg=0 ;
             //find the string which has london or name of the town
-            List<string> moreString = listofdata.Where(x => x.Split(':')[0].Equals(town)).Select(x => x).ToList();
-            if (moreString.Count > 0)
+            string[] moreString = data.Split("\n").Where(x => x.Split(':')[0].Equals(town)).Select(x => x).ToArray<string>();
+            if (moreString.Length > 0)
             {
-                string[] rainfalls = moreString[0].Split(':')[1].Split(',').ToArray<string>();
-
-                string[] values = moreString[0].Split(':')[1].Split(',').Select(x => x.Split(' ')[1]).ToArray<string>();
-
-                int count = values.Select(x => double.Parse(x)).Count();
-
-                avg = values.Select(x => double.Parse(x)).Average();
-                double variance = values.Select(x => double.Parse(x)).Select(x => Math.Pow(x - avg, 2)).Average(); 
+                foreach (string s in moreString)
+                {
+                    string[] values = moreString[0].Split(':')[1].Split(',').Select(x => x.Split(' ')[1]).ToArray<string>();
+                    avg += values.Select(x => double.Parse(x)).Average();
+                }
             }
+            else avg = -1;
             return avg; 
         }
 
