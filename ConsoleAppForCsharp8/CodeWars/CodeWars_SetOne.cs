@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -26,5 +27,23 @@ namespace ConsoleAppForCsharp8.CodeWars
             string phonenum = new String(str.Where(x => Char.IsNumber(x)).Select(x => x).ToArray());
             return ((phonenum.Length == 11)&&(phonenum[0].Equals('0')) ? phonenum: "Not a phone number");
         }
+
+        public static bool IsIsogram(string str)
+        {
+            return (str.ToLower().ToCharArray().Distinct().Count() == str.Length);
+        }
+
+        public static int DescendingOrder(int num)
+        {          
+            char[] chars = num.ToString().OrderByDescending(x => x).ToArray();            
+            return (int.Parse(new string(chars)));
+        }
+
+        public static int Digits(ulong n)
+        {
+            return n.ToString().Where(x => Char.IsDigit(x)).Select(x => x).Count();
+        }
+
+        
     }
 }

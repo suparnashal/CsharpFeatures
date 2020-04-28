@@ -44,10 +44,17 @@ namespace ConsoleAppForCsharp8
             //HardChallenges.Brackets("(a*(b-c)     )");
             //HardChallenges.ToCamelCase("camel_case");
             //Console.WriteLine(CodeWars_SetOne.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 ,0}));
-            
-            Console.WriteLine(CodeWars_SetOne.IsItANum("sjfniebienvr12312312312ehfWh"));
+
+            //Console.WriteLine(CodeWars_SetOne.IsItANum("sjfniebienvr12312312312ehfWh"));
+            //Console.WriteLine($"Dermatoglyphics : {CodeWars_SetOne.IsIsogram("Dermatoglyphics")}");
+            //Console.WriteLine($"aba : {CodeWars_SetOne.IsIsogram("aba")}");
+
+            //CodeWars_SetOne.DescendingOrder(1021);
+            //Console.WriteLine(CodeWars_SetOne.Digits(12345ul));
+            Console.WriteLine($"{CodeWars_SetTwo.Mean("London", "")}   {CodeWars.CodeWars_SetTwo.Variance("London", "")}");
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
+        
         }
 
         public static void Test_ReadOnly_In_Structs()
