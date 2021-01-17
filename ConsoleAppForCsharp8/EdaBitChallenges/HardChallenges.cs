@@ -49,7 +49,7 @@ namespace ConsoleAppForCsharp8.EdaBitChallenges
 
         public static void ToCamelCase(string str)
         {          
-            MatchCollection _matches = Regex.Matches(str, "[_]");
+            MatchCollection _matches = Regex.Matches(str, "[_]");          
             
             foreach(Match m in _matches)
             {              

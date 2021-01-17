@@ -11,7 +11,7 @@ namespace ConsoleAppForCsharp8
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             //Test_ReadOnly_In_Structs();
             //Test_Default_Interface_Methods();
@@ -51,7 +51,11 @@ namespace ConsoleAppForCsharp8
 
             //CodeWars_SetOne.DescendingOrder(1021);
             //Console.WriteLine(CodeWars_SetOne.Digits(12345ul));
-            Console.WriteLine($"{CodeWars_SetTwo.Mean("London", "")}   {CodeWars.CodeWars_SetTwo.Variance("London", "")}");
+            //Console.WriteLine($"{CodeWars_SetTwo.Mean("London", "")}   {CodeWars.CodeWars_SetTwo.Variance("London", "")}");
+
+            //Console.WriteLine($"{CodeWars_SetThree.StringLetterCount("This is a test sentence.")}");
+            Console.WriteLine($"{CodeWars_SetThree.IsOnionArray(new int[] { 6, 0, 4 })}");
+            Console.WriteLine($"{CodeWars_SetThree.IsOnionArray(new int[] { 1,1,15,10,-1})}");
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
         
